@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bulma css template -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <!-- ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!-- model viewer -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+  <title>
+    DreamGaussian4D
+  </title>
+  <!-- <link rel="icon" href="icon.ico"> -->
+</head>
+<body>
+  <section class="section">
+
+  <div class="container has-text-centered">
+    <!-- paper title -->
+    <p class="title is-3"> DreamGaussian4D: Generative 4D Gaussian Splatting </p>
+    <!-- publication -->
+    <p class="subtitle is-4"> Arxiv 2023 </p>
+    <!-- authors -->
+    <p class="title is-5 mt-2"> 
+      Anonymous Authors
+    </p>
+
+    <!-- other links -->
+    <div class="is-flex is-justify-content-center">
+      <span class="icon-text mx-1">
+        <a class="button is-dark" href="https://github.com/dreamgaussian4d/dreamgaussian4d" role="button" target="_blank"> <span class="icon"> <ion-icon name="logo-github"></ion-icon> </span> <span> Code </span> </a> 
+      </span>
+    </div>
+   
+  </div>
+
+  <!-- main container -->
+  <div class="container is-max-desktop has-text-centered">
+
+    <!-- abstract -->
+    <p class="title is-3 mt-5 has-text-centered"> Abstract </p>
+    <p class="content is-size-6 has-text-left">
+      Remarkable progress has been made in 4D content generation recently. However, existing methods suffer from long optimization time, lack of motion controllability, and a low level of detail. In this paper, we introduce DreamGaussian4D, an efficient 4D generation framework that builds on 4D Gaussian Splatting representation. Our key insight is that the explicit modeling of spatial transformations in Gaussian Splatting makes it more suitable for the 4D generation setting compared with implicit representations. DreamGaussian4D reduces the optimization time from several hours to just a few minutes, allows flexible control of the generated 3D motion, and produces animated meshes that can be efficiently rendered in 3D engines.
+    </p>
+
+
+    <!-- results (videos) -->
+    <!-- <p class="title is-3 mt-5 has-text-centered"> A Virtual Party </p> -->
+
+    <!-- <p class="content has-text-centered is-size-5">
+      DreamGaussian4D extends DreamGaussian for dynamic 3D scene generation. It breathes life to 2D static images.
+    </p> -->
+    <video muted autoplay controls loop width="80%"> <source src="videos/teaser.mp4" type="video/mp4"> </video>
+
+
+    
+    <!-- results (videos) -->
+    <p class="title is-3 mt-5 has-text-centered"> Convergence Speed </p>
+
+    <p class="content has-text-centered is-size-5">
+      The dynamic optimization converges in 4.5 minutes.
+    </p>
+    <video muted autoplay controls loop  width="70%"> <source src="videos/convergence.mp4" type="video/mp4"> </video>
+    
+
+
+    <p class="title is-3 mt-5 has-text-centered"> Image-to-4D </p>
+    <video muted autoplay loop> <source src="videos/examples.mp4" type="video/mp4"> </video>
+
+
+    <p class="title is-3 mt-5 has-text-centered"> Diverse Motions </p>
+    Diverse 3D motions can be generated for the same static model.
+    <video muted autoplay loop width="60%"> <source src="videos/motion.mp4" type="video/mp4"> </video>
+
+    <!-- 3d model viewer -->
+    <p class="title is-3 mt-5 has-text-centered"> Exported Meshes </p>
+    <div class="level">
+      <div class="level-item">
+        <iframe src="./render_draco.html?sequence=astronaut" class="meshViewer" frameBorder="0", style="width: 100%; height: 300px;"></iframe>
+      </div>
+      <div class="level-item">
+        <iframe src="./render_draco.html?sequence=anya" class="meshViewer" frameBorder="0", style="width: 100%; height: 300px;"></iframe>
+      </div>
+      <div class="level-item">
+        <iframe src="./render_draco.html?sequence=csm_luigi" class="meshViewer" frameBorder="0", style="width: 100%; height: 300px;"></iframe>
+      </div>
+    </div>
+
+      </div>
+    </div>
+  </div>
+
+  </section>
+</body>
+</html>
