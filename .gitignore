@@ -1,2 +1,11 @@
 .DS_Store
 **/.DS_Store
+
+__pycache__/
+build/
+*.egg-info/
+*.so
+venv_*/
+.vs/
+.vscode/
+.idea/
