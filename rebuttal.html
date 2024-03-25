@@ -1,0 +1,780 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bulma css template -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!-- model viewer -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js" defer></script>
+  <title>
+    Rebuttal for DreamGaussian4D
+  </title>
+</head>
+<body>
+  <section class="section">
+
+  <div class="container has-text-centered">
+    <!-- paper title -->
+    <p class="title is-3"> [Rebuttal] DreamGaussian4D: Generative 4D Gaussian Splatting </p>
+    <!-- publication -->
+    <p class="subtitle is-4"> Submission to ICML 2024 </p>
+  </div>
+  </section>
+
+  <button type="button" class="collapsible">1. Side-by-side Comparsion with Consistent4D</button>
+  <div class="collapsible_content">
+    <p class="title is-3 mt-5 has-text-centered"> Side-by-side Comparsion with Consistent4D </p>
+    <p class="content has-text-centered is-size-5">Results are borrowed from the official webpage of Consistent4D.</p>
+    <div class="header">
+      <button class="page-consistent4d-number">1</button>
+      <button class="page-consistent4d-number">2</button>
+      <button class="page-consistent4d-number">3</button>
+      <button class="page-consistent4d-number">4</button>
+      <button class="page-consistent4d-number">5</button>
+      <button class="page-consistent4d-number">6</button>
+    </div>
+    <div class="video-page-consistent4d" id="page-consistent4d1">
+      <div class="row" style="width:60%">
+        <div class="column">
+          <video src="images/consistent4d/1-0.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/1-1.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/1-2.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <img src="images/our_v24d/walking_astronaut.gif" alt="missing" style="width:100%">
+        </div>
+      </div>
+      <div class="row" style="width:60%">
+        <div class="column">
+          <video src="images/consistent4d/2-0.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/2-1.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/2-2.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <img src="images/our_v24d/swimming_guppie.gif" alt="missing" style="width:100%">
+        </div>
+      </div>
+      <div class="row" style="width:60%">
+        <div class="column">
+          <video src="images/consistent4d/3-0.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/3-1.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/3-2.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <img src="images/our_v24d/walking_white_faced_egret.gif" alt="missing" style="width:100%">
+        </div>
+      </div>
+      <div class="row" style="width:60%">
+        <div class="column">
+          <figure>
+            <video src="images/consistent4d/4-0.mp4" controls autoplay loop muted></video>
+            <figcaption>Input Video</figcaption>
+          </figure>
+        </div>
+        <div class="column">
+          <figure>
+            <video src="images/consistent4d/4-1.mp4" controls autoplay loop muted></video>
+            <figcaption>Consistent4D View 1</figcaption>
+          </figure>
+        </div>
+        <div class="column">
+          <figure>
+            <video src="images/consistent4d/4-2.mp4" controls autoplay loop muted></video>
+            <figcaption>Consistent4D View 2</figcaption>
+          </figure>
+        </div>
+        <div class="column">
+          <figure>
+            <img src="images/our_v24d/smiling_corgi.gif" alt="missing" style="width:100%">
+            <figcaption>Ours</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <div class="video-page-consistent4d" id="page-consistent4d2">
+      <div class="row" style="width:60%">
+        <div class="column">
+          <video src="images/consistent4d/5-0.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/5-1.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/5-2.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <img src="images/our_v24d/blooming_rose.gif" alt="missing" style="width:100%">
+        </div>
+      </div>
+      <div class="row" style="width:60%">
+        <div class="column">
+          <video src="images/consistent4d/6-0.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/6-1.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/6-2.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <img src="images/our_v24d/dancing_spiderman.gif" alt="missing" style="width:100%">
+        </div>
+      </div>
+      <div class="row" style="width:60%">
+        <div class="column">
+          <video src="images/consistent4d/7-0.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/7-1.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/7-2.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <img src="images/our_v24d/walking_siamese_cat.gif" alt="missing" style="width:100%">
+        </div>
+      </div>
+      <div class="row" style="width:60%">
+        <div class="column">
+          <figure>
+            <video src="images/consistent4d/8-0.mp4" controls autoplay loop muted></video>
+            <figcaption>Input Video</figcaption>
+          </figure>
+        </div>
+        <div class="column">
+          <figure>
+            <video src="images/consistent4d/8-1.mp4" controls autoplay loop muted></video>
+            <figcaption>Consistent4D View 1</figcaption>
+          </figure>
+        </div>
+        <div class="column">
+          <figure>
+            <video src="images/consistent4d/8-2.mp4" controls autoplay loop muted></video>
+            <figcaption>Consistent4D View 2</figcaption>
+          </figure>
+        </div>
+        <div class="column">
+          <figure>
+            <img src="images/our_v24d/swimming_yellow_tang.gif" alt="missing" style="width:100%">
+            <figcaption>Ours</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <div class="video-page-consistent4d" id="page-consistent4d3">
+      <div class="row" style="width:60%">
+        <div class="column">
+          <video src="images/consistent4d/9-0.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/9-1.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/9-2.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <img src="images/our_v24d/looking_up_kitten.gif" alt="missing" style="width:100%">
+        </div>
+      </div>
+      <div class="row" style="width:60%">
+        <div class="column">
+          <video src="images/consistent4d/10-0.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/10-1.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/10-2.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <img src="images/our_v24d/looking_around_jack_russell.gif" alt="missing" style="width:100%">
+        </div>
+      </div>
+      <div class="row" style="width:60%">
+        <div class="column">
+          <video src="images/consistent4d/11-0.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/11-1.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/11-2.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <img src="images/our_v24d/dancing_robot.gif" alt="missing" style="width:100%">
+        </div>
+      </div>
+      <div class="row" style="width:60%">
+        <div class="column">
+          <figure>
+            <video src="images/consistent4d/12-0.mp4" controls autoplay loop muted></video>
+            <figcaption>Input Video</figcaption>
+          </figure>
+        </div>
+        <div class="column">
+          <figure>
+            <video src="images/consistent4d/12-1.mp4" controls autoplay loop muted></video>
+            <figcaption>Consistent4D View 1</figcaption>
+          </figure>
+        </div>
+        <div class="column">
+          <figure>
+            <video src="images/consistent4d/12-2.mp4" controls autoplay loop muted></video>
+            <figcaption>Consistent4D View 2</figcaption>
+          </figure>
+        </div>
+        <div class="column">
+          <figure>
+            <img src="images/our_v24d/blooming_tulip.gif" alt="missing" style="width:100%">
+            <figcaption>Ours</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <div class="video-page-consistent4d" id="page-consistent4d4">
+      <div class="row" style="width:60%">
+        <div class="column">
+          <video src="images/consistent4d/13-0.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/13-1.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/13-2.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <img src="images/our_v24d/idling_elephant.gif" alt="missing" style="width:100%">
+        </div>
+      </div>
+      <div class="row" style="width:60%">
+        <div class="column">
+          <video src="images/consistent4d/14-0.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/14-1.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/14-2.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <img src="images/our_v24d/feeding_squirrel.gif" alt="missing" style="width:100%">
+        </div>
+      </div>
+      <div class="row" style="width:60%">
+        <div class="column">
+          <video src="images/consistent4d/15-0.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/15-1.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/15-2.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <img src="images/our_v24d/walking_aurorus.gif" alt="missing" style="width:100%">
+        </div>
+      </div>
+      <div class="row" style="width:60%">
+        <div class="column">
+          <figure>
+            <video src="images/consistent4d/16-0.mp4" controls autoplay loop muted></video>
+            <figcaption>Input Video</figcaption>
+          </figure>
+        </div>
+        <div class="column">
+          <figure>
+            <video src="images/consistent4d/16-1.mp4" controls autoplay loop muted></video>
+            <figcaption>Consistent4D View 1</figcaption>
+          </figure>
+        </div>
+        <div class="column">
+          <figure>
+            <video src="images/consistent4d/16-2.mp4" controls autoplay loop muted></video>
+            <figcaption>Consistent4D View 2</figcaption>
+          </figure>
+        </div>
+        <div class="column">
+          <figure>
+            <img src="images/our_v24d/flying_ironman.gif" alt="missing" style="width:100%">
+            <figcaption>Ours</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <div class="video-page-consistent4d" id="page-consistent4d5">
+      <div class="row" style="width:60%">
+        <div class="column">
+          <video src="images/consistent4d/17-0.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/17-1.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/17-2.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <img src="images/our_v24d/sighing_frog.gif" alt="missing" style="width:100%">
+        </div>
+      </div>
+      <div class="row" style="width:60%">
+        <div class="column">
+          <video src="images/consistent4d/18-0.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/18-1.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/18-2.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <img src="images/our_v24d/dancing_patrick_star.gif" alt="missing" style="width:100%">
+        </div>
+      </div>
+      <div class="row" style="width:60%">
+        <div class="column">
+          <video src="images/consistent4d/19-0.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/19-1.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/19-2.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <img src="images/our_v24d/deforming_toy_rabbit.gif" alt="missing" style="width:100%">
+        </div>
+      </div>
+      <div class="row" style="width:60%">
+        <div class="column">
+          <figure>
+            <video src="images/consistent4d/20-0.mp4" controls autoplay loop muted></video>
+            <figcaption>Input Video</figcaption>
+          </figure>
+        </div>
+        <div class="column">
+          <figure>
+            <video src="images/consistent4d/20-1.mp4" controls autoplay loop muted></video>
+            <figcaption>Consistent4D View 1</figcaption>
+          </figure>
+        </div>
+        <div class="column">
+          <figure>
+            <video src="images/consistent4d/20-2.mp4" controls autoplay loop muted></video>
+            <figcaption>Consistent4D View 2</figcaption>
+          </figure>
+        </div>
+        <div class="column">
+          <figure>
+            <img src="images/our_v24d/running_triceratops.gif" alt="missing" style="width:100%">
+            <figcaption>Ours</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <div class="video-page-consistent4d" id="page-consistent4d6">
+      <div class="row" style="width:60%">
+        <div class="column">
+          <video src="images/consistent4d/21-0.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/21-1.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/21-2.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <img src="images/our_v24d/scaring_skull.gif" alt="missing" style="width:100%">
+        </div>
+      </div>
+      <div class="row" style="width:60%">
+        <div class="column">
+          <video src="images/consistent4d/22-0.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/22-1.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/22-2.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <img src="images/our_v24d/laughing_minions.gif" alt="missing" style="width:100%">
+        </div>
+      </div>
+      <div class="row" style="width:60%">
+        <div class="column">
+          <video src="images/consistent4d/23-0.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/23-1.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <video src="images/consistent4d/23-2.mp4" controls autoplay loop muted></video>
+        </div>
+        <div class="column">
+          <img src="images/our_v24d/firing_pistol.gif" alt="missing" style="width:100%">
+        </div>
+      </div>
+      <div class="row" style="width:60%">
+        <div class="column">
+          <figure>
+            <video src="images/consistent4d/24-0.mp4" controls autoplay loop muted></video>
+            <figcaption>Input Video</figcaption>
+          </figure>
+        </div>
+        <div class="column">
+          <figure>
+            <video src="images/consistent4d/24-1.mp4" controls autoplay loop muted></video>
+            <figcaption>Consistent4D View 1</figcaption>
+          </figure>
+        </div>
+        <div class="column">
+          <figure>
+            <video src="images/consistent4d/24-2.mp4" controls autoplay loop muted></video>
+            <figcaption>Consistent4D View 2</figcaption>
+          </figure>
+        </div>
+        <div class="column">
+          <figure>
+            <img src="images/our_v24d/splashing_water.gif" alt="missing" style="width:100%">
+            <figcaption>Ours</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="collapsible">2. Side-by-side comparison with 4DGen</button>
+  <div class="collapsible_content">
+    <p class="title is-3 mt-5 has-text-centered"> Bird flapping wings </p>
+    <p class="content has-text-centered is-size-5">Example of bird flapping wings. Also comparison with Animate124</p>
+    <p class="content has-text-centered is-size-5">Input Videos</p>
+    <div class="row" style="width:50%">
+      <div class="column">
+        <video src="images/consistent4d/5-0.mp4" controls autoplay loop muted></video>
+      </div>
+      <div class="column">
+        <video src="images/consistent4d/8-0.mp4" controls autoplay loop muted></video>
+      </div>
+      <div class="column">
+        <video src="images/consistent4d/12-0.mp4" controls autoplay loop muted></video>
+      </div>
+      <div class="column">
+        <video src="images/consistent4d/16-0.mp4" controls autoplay loop muted></video>
+      </div>
+    </div>
+    <hr style="width:100%;text-align:left;margin-bottom:10px">
+    <p class="content has-text-centered is-size-5">Ours</p>
+    <div class="row" style="width:50%">
+      <div class="column">
+        <img src='images/our_v24d/blooming_rose.gif' alt='missing'/>
+      </div>
+      <div class="column">
+        <img src='images/our_v24d/swimming_yellow_tang.gif' alt='missing'/>
+      </div>
+      <div class="column">
+        <img src='images/our_v24d/blooming_tulip.gif' alt='missing'/>
+      </div>
+      <div class="column">
+        <img src='images/our_v24d/flying_ironman.gif' alt='missing'/>
+      </div>
+    </div>
+    <hr style="width:100%;text-align:left;margin-bottom:10px">
+    <p class="content has-text-centered is-size-5">4DGen</p>
+    <p align="center"><iframe width="560" height="315"  src="https://www.youtube.com/embed/Hbava1VpeXY?start=15&end=268"></iframe></p>
+  </div>
+
+  <button type="button" class="collapsible">3. Driving videos</button>
+  <div class="collapsible_content">
+    <p class="title is-3 mt-5 has-text-centered"> Driving videos </p>
+    <p class="content has-text-centered is-size-5">Top: Driving videos. Bottom: generated 4D.</p>
+    <div class="header">
+      <button class="page-number">1</button>
+      <button class="page-number">2</button>
+      <button class="page-number">3</button>
+    </div>
+    <div class="video-page" id="page1">
+      <div class="row" style="width:50%">
+        <div class="column">
+          <img src="images/driving_videos/anya_rgba_generated.gif" alt="missing" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="images/driving_videos/csm_luigi_rgba_white_010.gif" alt="missing" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="images/driving_videos/zelda_rgba_white_004.gif" alt="missing" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="images/driving_videos/catstatue_rgba_black_007.gif" alt="missing" style="width:100%">
+        </div>
+      </div>
+      <div class="row" style="width:50%">
+        <div class="column">
+          <img src="images/driving_videos/anya.gif" alt="missing" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="images/driving_videos/csm_luigi.gif" alt="missing" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="images/driving_videos/zelda.gif" alt="missing" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="images/driving_videos/catstatue.gif" alt="missing" style="width:100%">
+        </div>
+      </div>
+    </div>
+    <div class="video-page" id="page2">
+      <div class="row" style="width:50%">
+        <div class="column">
+          <img src="images/driving_videos/panda_white_010.gif" alt="missing" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="images/driving_videos/fish_black_017.gif" alt="missing" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="images/driving_videos/flag_white_000.gif" alt="missing" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="images/driving_videos/fox_orig_010.gif" alt="missing" style="width:100%">
+        </div>
+      </div>
+      <div class="row" style="width:50%">
+        <div class="column">
+          <img src="images/driving_videos/panda.gif" alt="missing" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="images/driving_videos/fish.gif" alt="missing" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="images/driving_videos/flag.gif" alt="missing" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="images/driving_videos/fox.gif" alt="missing" style="width:100%">
+        </div>
+      </div>
+    </div>
+    <div class="video-page" id="page3">
+      <div class="row" style="width:50%">
+        <div class="column">
+          <img src="images/driving_videos/astronaut_white_000.gif" alt="missing" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="images/driving_videos/monkey_orig_003.gif" alt="missing" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="images/driving_videos/space_black_000.gif" alt="missing" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="images/driving_videos/tiger_black_004.gif" alt="missing" style="width:100%">
+        </div>
+      </div>
+      <div class="row" style="width:50%">
+        <div class="column">
+          <img src="images/driving_videos/astronaut.gif" alt="missing" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="images/driving_videos/monkey.gif" alt="missing" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="images/driving_videos/space.gif" alt="missing" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="images/driving_videos/tiger.gif" alt="missing" style="width:100%">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="collapsible">4. Texture Refinement: image-to-image v.s. video-to-video</button>
+  <div class="collapsible_content">
+    <p class="title is-3 mt-5 has-text-centered"> Texture Refinement: image-to-image v.s. video-to-video </p>
+    <p class="content has-text-centered is-size-5">Image-to-image refinement results in clear flickering on the back of the tiger.</p>
+    <div class="row" style="width:40%">
+      <div class="column">
+        <!-- <img src="images/tiger_refined_zero123.gif" alt="Snow" style="width:100%"> -->
+        <figure>
+          <img src='images/refinement/tiger_refined_zero123.gif' alt='missing' />
+          <figcaption>Image-to-image</figcaption>
+      </figure>
+      </div>
+      <div class="column">
+        <figure>
+          <img src='images/refinement/tiger_refined.gif' alt='missing' />
+          <figcaption>Video-to-video</figcaption>
+      </figure>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="collapsible">5. Comparison Between Different Motion Representation</button>
+  <div class="collapsible_content">
+    <p class="title is-3 mt-5 has-text-centered"> Comparison Between Different Motion Representation </p>
+    <p class="content has-text-centered is-size-5">Motion representation is critical to 4D generation.</p>
+    <div class="row" style="width:60%">
+      <div class="column">
+        <!-- <img src="images/tiger_refined_zero123.gif" alt="Snow" style="width:100%"> -->
+        <figure>
+          <img src='images/motion_representation/anya_framewise2.gif' alt='missing' />
+          <figcaption>Framewise 3DGS</figcaption>
+      </figure>
+      </div>
+      <div class="column">
+        <figure>
+          <img src='images/motion_representation/anya_mlp.gif' alt='missing' />
+          <figcaption>MLP Deformation</figcaption>
+      </figure>
+      </div>
+      <div class="column">
+        <figure>
+          <img src='images/motion_representation/anya.gif' alt='missing' />
+          <figcaption>HexPlane Deformation</figcaption>
+      </figure>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="collapsible">6. Effect of HexPlane Resolutions</button>
+  <div class="collapsible_content">
+    <p class="title is-3 mt-5 has-text-centered"> Effect of HexPlane Resolutions </p>
+    <p class="content has-text-centered is-size-5">We show results of different HexPlane resolutions.</p>
+    <div class="row" style="width:100%">
+      <div class="column">
+        <!-- <img src="images/tiger_refined_zero123.gif" alt="Snow" style="width:100%"> -->
+        <figure>
+          <img src='images/hexplane_resolution/sighing_frog_s8.gif' alt='missing' />
+          <figcaption>S/4</figcaption>
+      </figure>
+      </div>
+      <div class="column">
+        <figure>
+          <img src='images/hexplane_resolution/sighing_frog_s128.gif' alt='missing' />
+          <figcaption>Sx4</figcaption>
+      </figure>
+      </div>
+      <div class="column">
+        <figure>
+          <img src='images/hexplane_resolution/sighing_frog_t8.gif' alt='missing' />
+          <figcaption>T/4</figcaption>
+      </figure>
+      </div>
+      <div class="column">
+        <figure>
+          <img src='images/hexplane_resolution/sighing_frog_t128.gif' alt='missing' />
+          <figcaption>Tx4</figcaption>
+      </figure>
+      </div>
+      <div class="column">
+        <figure>
+          <img src='images/hexplane_resolution/sighing_frog_s32.gif' alt='missing' />
+          <figcaption>Ours (32x32x32)</figcaption>
+      </figure>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="collapsible">7. Bird Flapping Wings</button>
+  <div class="collapsible_content">
+    <p class="title is-3 mt-5 has-text-centered"> Bird Flapping Wings </p>
+    <p class="content has-text-centered is-size-5">Example of bird flapping wings. Also comparison with Animate124</p>
+    <div class="row" style="width:60%">
+      <div class="column">
+        <!-- <img src="images/tiger_refined_zero123.gif" alt="Snow" style="width:100%"> -->
+        <figure>
+          <img src='images/bird_wings/eagle_input.png' alt='missing' />
+          <figcaption>Input Image</figcaption>
+      </figure>
+      </div>
+      <div class="column">
+        <figure>
+          <img src='images/bird_wings/eagle_aniamte124.gif' alt='missing' />
+          <figcaption>Animate124</figcaption>
+      </figure>
+      </div>
+      <div class="column">
+        <figure>
+          <img src='images/bird_wings/eagle_ours.gif' alt='missing' />
+          <figcaption>Ours</figcaption>
+      </figure>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="collapsible">8. Failure Cases</button>
+  <div class="collapsible_content">
+    <p class="title is-3 mt-5 has-text-centered"> Failure Cases </p>
+    <p class="content has-text-centered is-size-5">Failure mode 1: low quality video generated by Stable Video Diffusion. The generated horse motion is temporarily inconsistent. </p>
+    <div class="row" style="width:40%">
+      <div class="column">
+        <figure>
+          <img src='images/failure_case/astronaut.png' alt='missing' />
+          <figcaption>Input Image</figcaption>
+      </figure>
+      </div>
+      <div class="column">
+        <figure>
+          <img src='images/failure_case/astronaut_orig_005.gif' alt='missing' />
+          <figcaption>Generated Video</figcaption>
+      </figure>
+      </div>
+    </div>
+    <hr style="width:100%;text-align:left;margin-bottom:10px">
+    <p class="content has-text-centered is-size-5">Failure mode 2: low quality 3D generated by DreamGaussianHD. The back of the minion is wrongly textured.</p>
+    <div class="row" style="width:40%">
+      <div class="column">
+        <figure>
+          <img src='images/failure_case/0_rgba.png' alt='missing' />
+          <figcaption>Input Image</figcaption>
+      </figure>
+      </div>
+      <div class="column">
+        <figure>
+          <img src='images/failure_case/laughing_minions_static.gif' alt='missing' />
+          <figcaption>Generated 3D</figcaption>
+      </figure>
+      </div>
+    </div>
+    <hr style="width:100%;text-align:left;margin-bottom:10px">
+    <p class="content has-text-centered is-size-5">Failure mode 3: unnatural deformation. The top of the elephant nose is wrongly moved to its right hand.</p>
+    <div class="row" style="width:60%">
+      <div class="column">
+        <figure>
+          <img src='images/failure_case/idling_elephant_static.gif' alt='missing' />
+          <figcaption>Generated 3D</figcaption>
+      </figure>
+      </div>
+      <div class="column">
+        <figure>
+          <img src='images/failure_case/13-0.gif' alt='missing' />
+          <figcaption>Input Video</figcaption>
+      </figure>
+      </div>
+      <div class="column">
+        <figure>
+          <img src='images/failure_case/idling_elephant.gif' alt='missing' />
+          <figcaption>Generated 4D</figcaption>
+      </figure>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
