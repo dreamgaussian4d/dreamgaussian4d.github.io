@@ -13,6 +13,22 @@ $(document).ready(function() {
     });
   });
 
+
+$(document).ready(function() {
+  const pages = $('.video-page-static');
+  let currentPage = 0;
+
+  pages.hide();
+  pages.eq(currentPage).show();
+
+  $('.page-static-number').eq(currentPage).addClass('active');
+
+  $('.page-static-number').on('click', function() {
+      const pageNum = $(this).text();
+      showPage_static(parseInt(pageNum));
+  });
+});
+
   
 $(document).ready(function() {
   const pages = $('.video-page-consistent4d');
@@ -47,6 +63,23 @@ function showPage(pageNum) {
   pageNumbers[pageNum - 1].classList.add('active');
 }
 
+function showPage_static(pageNum) {
+
+  const pages = document.querySelectorAll('.video-page-static');
+  for (let page of pages) {
+      page.style.display = 'none';
+  }
+  
+
+  document.getElementById('page-static' + pageNum).style.display = 'block';
+
+
+  const pageNumbers = document.querySelectorAll('.page-static-number');
+  for (let pageNumber of pageNumbers) {
+    pageNumber.classList.remove('active');
+  }
+  pageNumbers[pageNum - 1].classList.add('active');
+}
 
 function showPage_consistent4d(pageNum) {
 

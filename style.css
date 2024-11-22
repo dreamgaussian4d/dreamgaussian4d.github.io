@@ -76,8 +76,8 @@ text-align: center;
 }
 
 .collapsible {
-background-color: #777;
-color: white;
+background-color: #FFF;
+color: black;
 cursor: pointer;
 padding: 18px;
 width: 100%;
@@ -88,14 +88,14 @@ font-size: 15px;
 }
 
 .active, .collapsible:hover {
-background-color: #555;
+background-color: #AAA;
 }
 
 .collapsible_content {
 padding: 0 18px;
-display: block;
+display: none;
 overflow: hidden;
-background-color: #f1f1f1;
+background-color: #ffffff;
 }
 
 /* .video-page {
@@ -132,5 +132,18 @@ font-size: 18px;
     }
     
 .page-consistent4d-number.active {
+    background-color: #ddd;
+}
+
+.page-static-number {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    font-size: 18px;
+    }
+    
+.page-static-number.active {
     background-color: #ddd;
 }
